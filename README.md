@@ -13,7 +13,7 @@ All screens are separated in custom stateless widgets that can be reused, modifi
 
 **Screens organization**
 
-Every part of this sample is one of few designs from different sources like [Dribble](https://dribbble.com/shots/popular/mobile), or public profiles of Design Studios like [Cuberto](https://www.instagram.com/cubertodesign/) and [Construct](https://www.instagram.com/construct.cc/).
+Every part of this sample is one of few designs from different sources like [Dribble](https://dribbble.com/shots/popular/mobile), or public profiles of design studios like [Cuberto](https://www.instagram.com/cubertodesign/) and [Construct](https://www.instagram.com/construct.cc/).
 
 **Mini-TODO**: Make gifs for all screens
 
