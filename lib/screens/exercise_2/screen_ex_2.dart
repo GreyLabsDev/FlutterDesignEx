@@ -51,6 +51,41 @@ class ScreenEx2State extends State {
                     )
                 ],
               ),
+            ),
+            SizedBox(height: 32.0,),
+            Padding(
+              padding: EdgeInsets.only(left: 32.0),
+              child: Text("Active projects", style: TextStyle(color: Colors.grey, fontSize: 16.0, fontWeight: FontWeight.bold),),
+            ),
+            SizedBox(height: 20.0,),
+            Wrap(
+              runSpacing: 20.0,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.only(left: 32.0),
+                  child: StatelessProjectCard(
+                    title: "Nike, Inc",
+                    progress: 55,
+                    logoImg: "https://static.highsnobiety.com/thumbor/Yb1AO3afH_SdwE891suyLhbL8hM=/fit-in/320x213/smart/static.highsnobiety.com/wp-content/uploads/2012/08/the-cost-of-a-logo-01.jpg",
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 32.0),
+                  child: StatelessProjectCard(
+                    title: "Tesla Motors",
+                    progress: 80,
+                    logoImg: "https://images-na.ssl-images-amazon.com/images/I/41IYHfgOS9L._SX425_.jpg",
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 32.0),
+                  child: StatelessProjectCard(
+                    title: "Neuralink",
+                    progress: 35,
+                    logoImg: "https://pbs.twimg.com/profile_images/895407294636187648/xoppJ-eR_400x400.jpg",
+                  ),
+                )    
+              ],
             )
             
           ],
@@ -58,7 +93,6 @@ class ScreenEx2State extends State {
       )
     );
   }
-
 }
 
 class StatelessGreetingsText extends StatelessWidget {
@@ -107,7 +141,8 @@ class StatelessTopToolbar extends StatelessWidget {
             color: Colors.black,
             onPressed: onUpPressedAction,
           ),
-          SizedBox(width: 16.0,)
+          SizedBox(width: 16.0,),
+         
         ],
       ),
     );
@@ -145,5 +180,52 @@ class StatelessRoundedIconButton extends StatelessWidget {
           child: Icon(icon, color: iconColor,),
         ),
       );
+  }
+}
+
+class StatelessProjectCard extends StatelessWidget {
+  Function() onClickAction;
+  final String logoImg;
+  final String title;
+  final int progress;
+
+  var titleTextStyle = TextStyle(color: Colors.black, fontSize: 18.0, fontWeight: FontWeight.bold);
+  var progressTextStyle = TextStyle(color: Colors.grey, fontSize: 10.0, fontWeight: FontWeight.bold);
+
+  StatelessProjectCard({Key key,this.onClickAction, this.title, this.progress, this.logoImg}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      width: double.infinity,
+      decoration: BoxDecoration(
+          shape: BoxShape.rectangle,
+          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16.0), topLeft: Radius.circular(16.0)),
+          color: Colors.grey[100]
+      ),
+      child: Row(
+        children: <Widget>[
+          ClipRRect(
+            borderRadius: BorderRadius.circular(16.0),
+            child: Image.network(
+              logoImg,
+              width: 70.0,
+              height: 60.0,
+              fit: BoxFit.fill,
+            ),
+          ),
+          SizedBox(width: 16.0,),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(title, style: titleTextStyle,),
+              SizedBox(height: 4.0,),
+              Text("IN PROGRESS - " + progress.toString() + "%", style: progressTextStyle,)
+            ],
+          ),
+        ],
+      ) 
+    );
   }
 }
