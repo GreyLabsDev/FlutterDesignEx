@@ -1,9 +1,12 @@
 
-import 'package:design_ex/screens/exercise_1/screen_ex_1.dart';
-import 'package:design_ex/screens/exercise_2/screen_ex_2.dart';
-import 'package:design_ex/screens/exercise_3/screen_ex_3.dart';
+
+import 'package:design_exercises/screens/main/widgets_main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../exercise_1/screen_ex_1.dart';
+import '../exercise_2/screen_ex_2.dart';
+import '../exercise_3/screen_ex_3.dart';
 
 class ScreenMain extends StatefulWidget {
   @override
@@ -15,35 +18,49 @@ class ScreenMainState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Center(
-            child: Wrap(
-              spacing: 8.0,
-              direction: Axis.vertical,
-              children: <Widget>[
-                MaterialButton(
-                  child: Text("Exercise 1 (construct.cc)"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ScreenEx1()));
-                  },
-                ),
-                MaterialButton(
-                  child: Text("Exercise 2 (cuberto)"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ScreenEx2()));
-                  },
-                ),
-                MaterialButton(
-                  child: Text("Exercise 3 (Hipstophone)"),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ScreenEx3()));
-                  },
-                )
-            ],
-          ),
-        )
+          
+            child: Padding(
+                padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                child: Column(
+                  children: <Widget>[
+                    StatelessScreenTitle(title: "Design exercies"),
+                    SizedBox(height: 16.0,),
+                    StatelessExerciseButton(
+                      title: "Exercise 1",
+                      description: "Design of some event page",
+                      designAuthors: "construct.cc",
+                      color: Colors.blue,
+                      onTap: () {
+                        Navigator.push(context,
+                             MaterialPageRoute(builder: (context) => ScreenEx1()));
+                      },
+                    ),
+                    SizedBox(height: 8.0,),
+                    StatelessExerciseButton(
+                      title: "Exercise 2",
+                      description: "Some kind of user profile page",
+                      designAuthors: "cuberto.com",
+                      color: Colors.blue,
+                      onTap: () {
+                        Navigator.push(context,
+                             MaterialPageRoute(builder: (context) => ScreenEx2()));
+                      },
+                    ),
+                    SizedBox(height: 8.0,),
+                    StatelessExerciseButton(
+                      title: "Exercise 3 - Hipstophone",
+                      description: "Example of wallpapers app design",
+                      designAuthors: "Alex Design",
+                      color: Colors.blue,
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => ScreenEx3()));
+                      },
+                    )
+                ],
+              ),
+            )
+        
       ),
     );
   }

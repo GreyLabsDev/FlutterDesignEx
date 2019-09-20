@@ -66,7 +66,7 @@ class ScreenEx2State extends State {
                   child: StatelessProjectCard(
                     title: "Nike, Inc",
                     progress: 55,
-                    logoImg: "https://static.highsnobiety.com/thumbor/Yb1AO3afH_SdwE891suyLhbL8hM=/fit-in/320x213/smart/static.highsnobiety.com/wp-content/uploads/2012/08/the-cost-of-a-logo-01.jpg",
+                    logoImg: "https://i.pinimg.com/originals/10/25/9d/10259ddb0af8da94af41b0912fb5f921.jpg",
                   ),
                 ),
                 Padding(

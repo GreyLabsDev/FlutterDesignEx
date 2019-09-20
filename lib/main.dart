@@ -1,6 +1,7 @@
 
-import 'package:design_ex/screens/main/screen_main.dart';
+
 import 'package:flutter/material.dart';
+import 'screens/main/screen_main.dart';
 
 void main() => runApp(MyApp());
 
