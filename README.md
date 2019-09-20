@@ -1,7 +1,7 @@
 # FlutterDesignEx
 Pack of screens and widgets from my Flutter layouting exercises
 
-![done screens](https://media.giphy.com/media/eiqF1Ak5vFcCY2ACny/giphy.gif)
+![done screens](https://github.com/GreyLabsDev/FlutterDesignEx/blob/master/demo.gif)
 
 **Why?**
 
