@@ -1,12 +1,10 @@
-
-
-import 'package:design_exercises/screens/main/widgets_main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../exercise_1/screen_ex_1.dart';
 import '../exercise_2/screen_ex_2.dart';
 import '../exercise_3/screen_ex_3.dart';
+import 'widgets_main.dart';
 
 class ScreenMain extends StatefulWidget {
   @override
@@ -18,7 +16,6 @@ class ScreenMainState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          
             child: Padding(
                 padding: EdgeInsets.only(left: 16.0, right: 16.0),
                 child: Column(
@@ -60,7 +57,6 @@ class ScreenMainState extends State {
                 ],
               ),
             )
-        
       ),
     );
   }
